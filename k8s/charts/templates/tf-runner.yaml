@@ -1,0 +1,13 @@
+apiVersion: tf.weave.works/v1alpha2
+kind: Terraform
+metadata:
+  name: {{ .Release.Name }}-vm
+  namespace: default
+spec:
+  interval: 2m
+  path: {{ .Values.terraformPath }}
+  sourceRef:
+    kind: GitRepository
+    name: {{ .Release.Name }}-repo
+  secretRef:
+    name: {{ .Values.secretRef }}
