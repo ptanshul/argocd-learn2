@@ -1,0 +1,4 @@
+gitRepository: "https://github.com/ptanshul/argocd-learn2"
+gitBranch: "master"
+terraformPath: "./infra"
+secretRef: "azure-creds"
